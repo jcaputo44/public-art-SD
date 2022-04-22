@@ -2,9 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const pieceSchema = new Schema({
+    image: {
+        type: String
+    },
+    artist: {
+        type: String,
+        required: true
+    },
     title: {
       type: String,
       required: true
+    },
+    location: {
+        type: String
     },
     year: {
       type: Number,
@@ -12,10 +22,10 @@ const pieceSchema = new Schema({
         return new Date().getFullYear();
       }
     },
-    mpaaRating: {
+    media: {
       type: String,
-      enum: ['G', 'PG', 'PG-13', 'R']
     },
+    comments: [commentSchema]
   }, {
     timestamps: true
   });
