@@ -14,6 +14,8 @@
     <nav>
         <a href="/pieces">HOME</a>
         <% if (user) { %>
+            <a href="/pieces/show">SHOW</a>
+          <a href="/pieces/new">NEW PIECE</a>
           <a href="/logout">LOG OUT</a>
         <% } else { %>
           <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>

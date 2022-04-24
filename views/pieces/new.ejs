@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<br>
+<form id="new-form" action="/pieces/show" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title"><br>
+    <label>Link To Image:</label>
+    <input type="text" name="image"><br>
+    <label>Artist:</label>
+    <input type="text" name="artist"><br>
+    <label>Location:</label>
+    <input type="text" name="location"><br>
+    <label>Year:</label>
+    <input type="text" name="year"><br>
+    <label>Media:</label>
+    <input type="text" name="media"><br>
+    <label>Currently Available:</label>
+    <input type="checkbox" name="currentlyAvailable" checked><br>
+    <input type="submit" value="Add Piece">
+  </form>
+
+<%- include('../partials/footer') %>
