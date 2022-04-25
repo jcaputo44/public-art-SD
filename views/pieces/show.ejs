@@ -1,5 +1,12 @@
 <%- include('../partials/header') %>
 
-<p>show show</p>
+<section id="show-page">
+  <div>Title: </div>
+  <div><%= piece.title %></div>
+  <div>Artist: </div>
+  <div><%= piece.artist %></div>
+  <div>Currently Available:</div>
+  <div><%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
+    <img src="<%= piece.image %>" height="100vmin" alt="ohNo" >
 
 <%- include('../partials/footer') %>

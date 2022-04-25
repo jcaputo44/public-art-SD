@@ -14,7 +14,8 @@ const commentSchema = new Schema({
 
 const pieceSchema = new Schema({
     image: {
-        type: String
+        type: String,
+        required: true
     },
     title: {
         type: String
@@ -35,6 +36,11 @@ const pieceSchema = new Schema({
     media: {
       type: String,
     },
+    currentlyAvailable: {
+        type: Boolean,
+        default: true
+    },
+
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',

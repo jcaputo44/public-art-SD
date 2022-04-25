@@ -12,7 +12,7 @@
       <% pieces.forEach(function(p) { %>
         <tr>
           <td><%= p.artist %></td>
-          <th></th>
+          <td><a href="/pieces/<%= p._id %>"><img src="<%= p.image %>" alt=""></a></td>
         </tr>
         <% }); %>
       </tbody>

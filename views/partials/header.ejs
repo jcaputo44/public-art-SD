@@ -10,11 +10,9 @@
 <body>
     <title><%= title %></title>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
     <nav>
         <a href="/pieces">HOME</a>
         <% if (user) { %>
-            <a href="/pieces/show">SHOW</a>
           <a href="/pieces/new">NEW PIECE</a>
           <a href="/logout">LOG OUT</a>
         <% } else { %>

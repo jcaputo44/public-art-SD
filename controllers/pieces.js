@@ -22,9 +22,11 @@ function create(req, res) {
   }
 
 function show(req, res) {
-     res.render('pieces/show', { title: 'Piece Details' });
-
-  }
+    Piece.findById(req.params.id)
+    .exec(function(err, piece) {
+        res.render('pieces/show', { title: 'Piece Details', piece});
+    })
+}
 
 function newPiece(req, res) {
     res.render('pieces/new', { title: 'Add Piece' });
