@@ -1,8 +1,27 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(243, 243, 233);
 }
 
 a {
-  color: #00B7FF;
+  /* color: #00B7FF; */
+  color: #108127;
+}
+.mainTitle{
+  display: flex;
+  justify-content: center ;
+  color: rgb(56, 54, 54);
+  font-size: 14vmin;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-top: -6.5vmin;
+  margin-bottom: -2.5vmin;
+}
+.welcomeFace {
+  display: flex;
+  justify-content: center ;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }

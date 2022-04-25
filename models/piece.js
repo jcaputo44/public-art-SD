@@ -35,6 +35,11 @@ const pieceSchema = new Schema({
     media: {
       type: String,
     },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
     comments: [commentSchema]
   }, {
     timestamps: true

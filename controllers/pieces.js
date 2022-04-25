@@ -11,7 +11,8 @@ function create(req, res) {
     req.body.currentlyAvailable = !!req.body.currentlyAvailable;
     for (let key in req.body) {
       if (req.body[key] === '') delete req.body[key];
-    }
+    } 
+    req.body.user = req.user._id;
     var piece = new Piece(req.body);
     piece.save(function(err) {
       if (err) return res.redirect('/pieces/new');
@@ -29,6 +30,8 @@ function newPiece(req, res) {
     res.render('pieces/new', { title: 'Add Piece' });
   }
 
-function index(req, res) {
-  res.render('pieces/index', {title: 'Public Art SD'});
+  function index(req, res) {
+    Piece.find({}, function(err, pieces){
+        res.render('pieces/index', {title: 'Public Art SD', pieces});
+    });
   }
