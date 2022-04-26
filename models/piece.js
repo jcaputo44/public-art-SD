@@ -27,12 +27,6 @@ const pieceSchema = new Schema({
     location: {
         type: String
     },
-    year: {
-      type: Number,
-      default: function() {
-        return new Date().getFullYear();
-      }
-    },
     media: {
       type: String,
     },

@@ -1,21 +1,13 @@
 <%- include('../partials/header') %>
 
 <!-- <p>indecs</p> -->
-<table id="pieces">
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% pieces.forEach(function(p) { %>
-        <tr>
-          <td><%= p.title %></td>
-          <td><a href="/pieces/<%= p._id %>"><img src="<%= p.image %>" alt=""></a></td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
+<section class="pieces-page">
+  <% pieces.forEach(function(p) { %>
+  <a href="/pieces/<%= p._id %>"><img src="<%= p.image %>" height="400vmin" alt="oopsie"></a>
+  <td><%= p.title %></td>
+  <br><br>
+  <% }); %>
+</section>
+
     
 <%- include('../partials/footer') %>

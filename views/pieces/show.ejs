@@ -1,12 +1,37 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <title><%= title %></title>
+    <h1>"&nbsp;<%= piece.title %>&nbsp;"</h1>
+    <br>
+    <nav>
+        <a href="/pieces">HOME</a>
+        <% if (user) { %>
+          <a href="/pieces/new">NEW PIECE</a>
+          <a href="/logout">LOG OUT</a>
+        <% } else { %>
+          <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
+        <% } %>
+    </nav>
 
-<section id="show-page">
+<section class="show-page">
   <img src="<%= piece.image %>" height="350vmin" alt="oopsies" >
-  <div>Title:&nbsp;<%= piece.title %></div>
-  <div>Artist:&nbsp;<%= piece.artist %></div>
-  <div>Currently Available:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
-
-  <br><br>
+    <div class="piece-details">
+      <div>Title:&nbsp;<%= piece.title %></div>
+      <div>Artist:&nbsp;<%= piece.artist %></div>
+      <div>Location:&nbsp;<%= piece.location %></div>
+      <div>Media Used:&nbsp;<%= piece.media %></div>
+      <div>Description:&nbsp;<%= piece.description %></div>
+      <div>Currently Available:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
+      <br><br>
+    </div>    
 <% if (user) { %>
   <form id="add-comment-form" method="POST" action="/pieces/<%= piece._id %>/comments">
     <label>Comments / Interpretations:</label><br>
@@ -51,5 +76,5 @@
 <% } else { %>
   <h5>No Comments Yet</h5>
 <% } %>
-
+</section>
 <%- include('../partials/footer') %>
