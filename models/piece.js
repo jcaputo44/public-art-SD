@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-    content: {
+    comment: {
       type: String
     },
     user: {type: Schema.Types.ObjectId, ref: 'User', required: true},
@@ -36,11 +36,13 @@ const pieceSchema = new Schema({
     media: {
       type: String,
     },
+    description: {
+      type: String
+    },
     currentlyAvailable: {
         type: Boolean,
         default: true
     },
-
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',

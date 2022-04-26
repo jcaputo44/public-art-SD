@@ -1,17 +1,17 @@
 <%- include('../partials/header') %>
 
-<p>indecs</p>
+<!-- <p>indecs</p> -->
 <table id="pieces">
     <thead>
       <tr>
-        <th>Artist</th>
+        <th></th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <% pieces.forEach(function(p) { %>
         <tr>
-          <td><%= p.artist %></td>
+          <td><%= p.title %></td>
           <td><a href="/pieces/<%= p._id %>"><img src="<%= p.image %>" alt=""></a></td>
         </tr>
         <% }); %>
