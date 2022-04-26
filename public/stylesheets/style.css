@@ -17,6 +17,7 @@ a {
   margin-top: -6.5vmin;
   margin-bottom: -2.5vmin;
 }
+
 .welcomeFace {
   display: flex;
   justify-content: center ;
@@ -37,11 +38,11 @@ h1 {
 }
 
 body > nav {
-  /* grid-area: nav; */
+  grid-area: nav;
   display: flex;
-  justify-content: space-evenly;
-  /* align-content: space-between; */
-  /* padding: 0 20px 0 30px; */
+  justify-content: space-around;
+  /* align-items: center;
+  padding: 0 20px 0 30px; */
 }
 
 .show-page {
@@ -56,11 +57,11 @@ body > nav {
 
 .piece-details {
   display: flex;
-  justify-content: center ;
-  align-content: center;
+  width: 400px;
   align-items: center;
   flex-direction: column;
   margin-top: 2vmin;
+  text-align: center;
 }
 
 .pieces-page {
@@ -70,4 +71,38 @@ body > nav {
   align-items: center;
   flex-direction: column;
   margin-top: 7vmin;
+}
+
+img {
+  border-radius: 5%;
+  border: 3px solid rgb(56, 54, 54);
+}
+
+.comm-sect {
+  display: flex;
+  text-align: center;
+}
+
+.comm-box {
+  border:2px solid rgb(56, 54, 54);
+  border-radius: 5px;
+}
+
+.comm-box:focus {
+  outline: none !important;
+  border:2px solid #108127;
+  border-radius: 5px;
+}
+
+.user-comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ava {
+  border-radius: 50%;
+  border: 2px solid rgb(56, 54, 54);
+  height: 50px;
 }

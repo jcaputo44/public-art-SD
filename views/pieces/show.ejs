@@ -11,6 +11,7 @@
     <title><%= title %></title>
     <h1>"&nbsp;<%= piece.title %>&nbsp;"</h1>
     <br>
+    <br>
     <nav>
         <a href="/pieces">HOME</a>
         <% if (user) { %>
@@ -28,19 +29,22 @@
       <div>Artist:&nbsp;<%= piece.artist %></div>
       <div>Location:&nbsp;<%= piece.location %></div>
       <div>Media Used:&nbsp;<%= piece.media %></div>
-      <div>Description:&nbsp;<%= piece.description %></div>
       <div>Currently Available:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
+      <br>
+      <div>Description: <br><%= piece.description %></div>
       <br><br>
     </div>    
 <% if (user) { %>
+  <div class="comm-sect">
   <form id="add-comment-form" method="POST" action="/pieces/<%= piece._id %>/comments">
     <label>Comments / Interpretations:</label><br>
     <br>
-    <textarea name="comment"></textarea><br>
+    <textarea name="comment" class="comm-box" rows="4" cols="47"></textarea><br>
     <br>
-    <input type="submit" value="Add Comment">
+    <input class="add-comm" type="submit" value="Add Comment">
   </form>
 <% } %>
+</div>
 <br>
 <% if (piece.comments.length) { %>
   <table>
@@ -56,7 +60,7 @@
       <% let total = 0 %>
       <% piece.comments.forEach(function(c) { %>
         <tr>
-          <td class="user-comment"><img alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
+          <td class="user-comment"><img class="ava" alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
           <td><%= c.comment %></td>
           <td>
