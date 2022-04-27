@@ -4,7 +4,28 @@ module.exports = {
     index,
     new: newPiece,
     show,
-    create
+    create,
+    edit,
+    update
+}
+
+function update(req, res) {
+  Piece.findOneAndUpdate(
+    {_id: req.params.id, user: req.user._id},
+    req.body,
+    {new: true},
+    function(err, piece) {
+      if (err || !piece) return res.redirect('/pieces');
+      res.redirect(`pieces/${piece._id}`);
+    }
+  );
+}
+
+function edit(req, res) {
+  Piece.findOne({_id: req.params.id, user: req.user._id}, function(err, piece) {
+    if (err || !piece) return res.redirect('/pieces');
+    res.render('pieces/edit', {piece});
+  });
 }
 
 function create(req, res) {

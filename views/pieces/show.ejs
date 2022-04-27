@@ -18,7 +18,7 @@
           <a href="/pieces/new">NEW PIECE</a>
           <a href="/logout">LOG OUT</a>
         <% } else { %>
-          <a href="/auth/google" class="login">LOG IN&nbsp;<img src=""></a>
+          <a href="/auth/google" class="login">LOG IN</a>
         <% } %>
     </nav>
 
@@ -32,6 +32,10 @@
       <div>Currently Available:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
       <br>
       <div>Description: <br><%= piece.description %></div>
+      <br>
+      <form action="/pieces/<%= piece._id %>/edit" method="GET">
+        <button type="submit">Edit Post</button>
+      </form>
       <br><br>
     </div>    
 <% if (user) { %>

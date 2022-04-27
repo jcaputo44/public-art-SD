@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Public Art SD</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <title>Public Art SD</title>
+    <h1>"&nbsp;<%= piece.title %>&nbsp;"</h1>
+    <br>
+    <br>
+    <nav>
+        <a href="/pieces">HOME</a>
+        <% if (user) { %>
+          <a href="/pieces/new">NEW PIECE</a>
+          <a href="/logout">LOG OUT</a>
+        <% } else { %>
+          <a href="/auth/google" class="login">LOG IN</a>
+        <% } %>
+    </nav>
+
+<br>
+<form id="form2" action="/pieces/<%= piece._id %>?_method=PUT" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title" value="<%= piece.title %>"><br>
+    <label>Link To Image:</label>
+    <input type="text" required name="image" value="<%= piece.image %> "><br>
+    <label>Artist:</label>
+    <input type="text" name="artist" value="<%= piece.artist%> "><br>
+    <label>Location:</label>
+    <input type="text" name="location" value="<%= piece.location %> "><br>
+    <label>Media:</label>
+    <input type="text" name="media" value="<%= piece.media %> "><br>
+    <label>Description:</label>
+    <textarea type="text" name="description" value="<%= piece.description %>"></textarea><br>
+    <label>Currently On Display:</label>
+    <input type="checkbox" name="currentlyAvailable" checked><br>
+    <br>
+    <input type="submit" value="Update Piece">
+  </form>
+
+<%- include('../partials/footer') %>
