@@ -94,6 +94,18 @@ img {
   border-radius: 5px;
 }
 
+textarea:focus {
+  outline: none !important;
+  border:2px solid #108127;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none !important;
+  border:2px solid #108127;
+  border-radius: 5px;
+}
+
 .user-comment {
   display: flex;
   flex-direction: column;
@@ -105,4 +117,9 @@ img {
   border-radius: 50%;
   border: 2px solid rgb(56, 54, 54);
   height: 50px;
+}
+
+.tdcomm {
+  display: flex;
+  justify-content: center;
 }

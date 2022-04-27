@@ -10,13 +10,16 @@ module.exports = {
 }
 
 function update(req, res) {
+  req.body.currentlyAvailable = !!req.body.currentlyAvailable;
+  console.log(req.body);
   Piece.findOneAndUpdate(
     {_id: req.params.id, user: req.user._id},
     req.body,
     {new: true},
     function(err, piece) {
+      console.log(err);
       if (err || !piece) return res.redirect('/pieces');
-      res.redirect(`pieces/${piece._id}`);
+      res.redirect(`/pieces/${piece._id}`);
     }
   );
 }
