@@ -29,7 +29,7 @@
       <div>Artist:&nbsp;<%= piece.artist %></div>
       <div>Location:&nbsp;<%= piece.location %></div>
       <div>Media Used:&nbsp;<%= piece.media %></div>
-      <div>Currently Available:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
+      <div>Currently On Display:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
       <br>
       <div>Description: <br><%= piece.description %></div>
       <br>
@@ -40,18 +40,8 @@
       <% } %>
       <br><br>
     </div>    
-<% if (user) { %>
-  <div class="comm-sect">
-  <form id="add-comment-form" method="POST" action="/pieces/<%= piece._id %>/comments">
-    <label>Comments / Interpretations:</label><br>
-    <br>
-    <textarea name="comment" class="comm-box" rows="4" cols="47"></textarea><br>
-    <br>
-    <input class="add-comm" type="submit" value="Add Comment">
-  </form>
-<% } %>
-</div>
 <br>
+</div>
 <% if (piece.comments.length) { %>
   <table>
     <thead>
@@ -65,13 +55,15 @@
       <% let total = 0 %>
       <% piece.comments.forEach(function(c) { %>
         <tr>
-          <td class="user-comment"><img class="ava" alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
+          <td height="90px" class="user-comment">
+            <img class="ava" alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %>
+          </td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
-          <td class="tdcomm"><%= c.comment %></td>
+          <td height="90px" class="tdcomm"><%= c.comment %></td>
           <td>
             <% if (user && user._id.equals(c.user)) { %>
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+                <button type="submit" class="del-butt">X</button>
               </form>
             <% } %>
           </td>
@@ -86,4 +78,14 @@
   <h5>No Comments Yet</h5>
 <% } %>
 </section>
+<% if (user) { %>
+  <div class="comm-sect">
+  <form id="add-comment-form" method="POST" action="/pieces/<%= piece._id %>/comments">
+    <label>Comments / Interpretations:</label><br>
+    <br>
+    <textarea name="comment" class="comm-box" rows="4" cols="47"></textarea><br>
+    <br>
+    <input class="add-comm" type="submit" value="Add Comment">
+  </form>
+<% } %>
 <%- include('../partials/footer') %>

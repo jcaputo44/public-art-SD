@@ -23,6 +23,7 @@
     </nav>
 
 <br>
+<section class="ed-form">
 <form id="form2" action="/pieces/<%= piece._id %>?_method=PUT" method="POST">
     <label>Title:</label>
     <input type="text" name="title" value="<%= piece.title %>"><br>
@@ -35,11 +36,12 @@
     <label>Media:</label>
     <input type="text" name="media" value="<%= piece.media %> "><br>
     <label>Description:</label>
-    <input type="textarea" name="description" value="<%= piece.description %>"></input><br>
+    <input type="textarea" name="description"  style="width: 190px;" value="<%= piece.description %>"></input><br>
     <label>Currently On Display:</label>
     <input type="checkbox" name="currentlyAvailable" checked><br>
     <br>
-    <input type="submit" value="Update Piece">
+    <input type="submit" class="add-up-butts" value="Update Piece">
   </form>
+</section>
 
 <%- include('../partials/footer') %>

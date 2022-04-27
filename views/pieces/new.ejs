@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 <br>
+<section class="add-form">
 <form id="form1" action="/pieces" method="POST">
     <label>Title:</label>
     <input type="text" name="title"><br>
@@ -12,11 +13,12 @@
     <label>Media:</label>
     <input type="text" name="media"><br>
     <label>Description:</label>
-    <textarea type="text" name="description"></textarea><br>
+    <input type="text" name="description"><br>
     <label>Currently On Display:</label>
     <input type="checkbox" name="currentlyAvailable" checked><br>
     <br>
-    <input type="submit" value="Add Piece">
+    <input type="submit" class="add-up-butts" value="Add Piece">
   </form>
+</section>
 
 <%- include('../partials/footer') %>
