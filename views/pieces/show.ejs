@@ -13,12 +13,12 @@
     <br>
     <br>
     <nav>
-        <a href="/pieces">HOME</a>
+        <a href="/pieces"><button class="hb">HOME</button></a>
         <% if (user) { %>
-          <a href="/pieces/new">NEW PIECE</a>
-          <a href="/logout">LOG OUT</a>
+          <a href="/pieces/new"><button class="npb">New Piece</button></a>
+          <a href="/logout"><button class="lob">LOG OUT</button></a>
         <% } else { %>
-          <a href="/auth/google" class="login">LOG IN</a>
+          <a href="/auth/google" class="login"><button>LOG IN</button></a>
         <% } %>
     </nav>
 

@@ -40,6 +40,11 @@ body > nav {
   grid-area: nav;
   display: flex;
   justify-content: space-around;
+  
+}
+
+a:link {
+  text-decoration: none;
 }
 
 .show-page {
@@ -148,6 +153,46 @@ button:hover {
   color: #ffffff;
 }
 
+.come-in {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15%;
+  height: 6vmin;
+  width: 20vmin;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 3vmin;
+  cursor: pointer;
+}
+
+.hb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15%;
+  height: 6vmin;
+  width: 15vmin;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 3vmin;
+  cursor: pointer;
+}
+
+.npb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15%;
+  height: 6vmin;
+  width: 24vmin;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 3vmin;
+  cursor: pointer;
+}
+
+.lob {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15%;
+  height: 6vmin;
+  width: 20vmin;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 3vmin;
+  cursor: pointer;
+}
+
 .del-butt {
   background-color: white;
   border-radius: 15%;
@@ -166,7 +211,7 @@ button:hover {
 .add-comm {
   background-color: white;
   border-radius: 15%;
-  height: 5vmin;
+  height: 6vmin;
   width: 22vmin;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 3vmin;
@@ -181,7 +226,7 @@ button:hover {
 .add-up-butts {
   background-color: rgb(255, 255, 255);
   border-radius: 15%;
-  height: 5vmin;
+  height: 6vmin;
   width: 20vmin;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 3vmin;
