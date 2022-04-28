@@ -4,17 +4,25 @@ body {
   background-color: rgb(243, 243, 233);
 }
 
-a {
+/* a {
   color: #108127;
-}
+} */
 .mainTitle{
   display: flex;
   justify-content: center ;
   color: rgb(56, 54, 54);
   font-size: 14vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chelsea Market', cursive;
   margin-top: -6.5vmin;
   margin-bottom: -2.5vmin;
+}
+
+h2 {
+  display: flex;
+  justify-content: center ;
+  color: rgb(56, 54, 54);
+  font-size: 3vmin;
+  font-family: 'Chelsea Market', cursive;
 }
 
 .welcomeFace {
@@ -24,6 +32,7 @@ a {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin-top: 3vmin;
 }
 
 h1 {
@@ -31,17 +40,26 @@ h1 {
   justify-content: center ;
   color: rgb(56, 54, 54);
   font-size: 12vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chelsea Market', cursive;
   margin-top: -6.5vmin;
   margin-bottom: -2.5vmin;
 }
 
-body > nav {
+.nav {
   grid-area: nav;
-  display: flex;
-  justify-content: space-around;
-  
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 45px;
+  justify-content: center;
 }
+
+/* .lob {
+  margin-left: auto;
+}
+
+.lib {
+  margin-left: auto;
+} */
 
 a:link {
   text-decoration: none;
@@ -62,7 +80,7 @@ h3 {
   justify-content: center ;
   color: rgb(56, 54, 54);
   font-size: 3vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chelsea Market', cursive;
   margin-top: -2vmin;
   margin-bottom: -2.5vmin;
 }
@@ -148,7 +166,7 @@ input:focus {
   align-items: center;
 }
 
-button {
+/* button {
   background-color: rgb(255, 255, 255);
   border-radius: 15%;
   height: 5vmin;
@@ -156,59 +174,49 @@ button {
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 3vmin;
   cursor: pointer;
-}
+} */
 
-button:hover {
-  background-color: #108127;
-  color: #ffffff;
+#hov:hover {
+  color: #108127;
 }
 
 .come-in {
-  background-color: rgb(255, 255, 255);
-  border-radius: 15%;
-  height: 6vmin;
-  width: 20vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  color:rgb(56, 54, 54);
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.come-in:hover {
+  color: #108127;
 }
 
 .hb {
-  background-color: white;
-  border-radius: 15%;
-  height: 6vmin;
-  width: 15vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  color:rgb(56, 54, 54);
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
 }
 
 .lib {
-  background-color: rgb(255, 255, 255);
-  border-radius: 15%;
-  height: 6vmin;
-  width: 16vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  color:rgb(56, 54, 54);
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
 }
 
 .npb {
-  background-color: rgb(255, 255, 255);
-  border-radius: 15%;
-  height: 6vmin;
-  width: 24vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  color:rgb(56, 54, 54);
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
 }
 
 .lob {
-  background-color: rgb(255, 255, 255);
-  border-radius: 15%;
-  height: 6vmin;
-  width: 20vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  color:rgb(56, 54, 54);
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
 }
@@ -218,7 +226,7 @@ button:hover {
   border-radius: 15%;
   height: 5vmin;
   width: 5vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
 }
@@ -232,9 +240,9 @@ button:hover {
   background-color: #108127;
   color: white;
   border-radius: 15%;
-  height: 5vmin;
+  height: 6vmin;
   width: 16vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
 }
@@ -250,7 +258,7 @@ button:hover {
   border-radius: 15%;
   height: 6vmin;
   width: 22vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
 }
@@ -266,7 +274,7 @@ button:hover {
   border-radius: 15%;
   height: 6vmin;
   width: 20vmin;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
   margin-left: 9vmin;

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Dela+Gothic+One&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
@@ -12,13 +13,13 @@
     <h1>"&nbsp;<%= piece.title %>&nbsp;"</h1>
     <br>
     <br>
-    <nav>
-        <a href="/pieces"><button class="hb">HOME</button></a>
+    <nav class="nav">
+        <a href="/pieces" class="hb" id="hov">HOME</a>
         <% if (user) { %>
-          <a href="/pieces/new"><button class="npb">NEW PIECE</button></a>
-          <a href="/logout"><button class="lob">LOG OUT</button></a>
+          <a href="/pieces/new" class="npb" id="hov">NEW PIECE</a>
+          <a href="/logout" class="lob" id="hov">LOG OUT</a>
         <% } else { %>
-          <a href="/auth/google" class="login"><button>LOG IN</button></a>
+          <a href="/auth/google" class="lib" id="hov">LOG IN</a>
         <% } %>
     </nav>
 

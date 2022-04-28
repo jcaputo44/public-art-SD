@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Dela+Gothic+One&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
   <div>
     <title class="mainTitle"><%= title %></title>
+    <h2>No Tickets? No Problem!</h2>
   </div>
   <div class="welcomeFace">
-    <img src="https://i.imgur.com/cch2b8Q.jpg" alt="oopsie" height="400vmin">
-      <br><a href="/pieces"><button class="come-in">Come On In</button></a>
+    <a href="/pieces"><img src="https://i.imgur.com/cch2b8Q.jpg" alt="oopsie" height="350vmin"></a>
+      <br><a href="/pieces" class="come-in">Come On In</a>
     </div>
 
 <%- include('./partials/footer') %>
