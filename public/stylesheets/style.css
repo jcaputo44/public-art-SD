@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: rgb(243, 243, 233);
+  background-color: rgb(240, 240, 232);
 }
 
 /* a {
@@ -10,7 +10,8 @@ body {
 .mainTitle{
   display: flex;
   justify-content: center ;
-  color: rgb(56, 54, 54);
+  /* color: rgb(56, 54, 54); */
+  color: rgb(52, 132, 218);
   font-size: 14vmin;
   font-family: 'Chelsea Market', cursive;
   margin-top: -6.5vmin;
@@ -20,7 +21,7 @@ body {
 h2 {
   display: flex;
   justify-content: center ;
-  color: rgb(56, 54, 54);
+  color: rgb(220, 172, 42);
   font-size: 3vmin;
   font-family: 'Chelsea Market', cursive;
 }
@@ -38,7 +39,8 @@ h2 {
 h1 {
   display: flex;
   justify-content: center ;
-  color: rgb(56, 54, 54);
+  color: rgb(52, 132, 218);
+  /* color: rgb(56, 54, 54); */
   font-size: 12vmin;
   font-family: 'Chelsea Market', cursive;
   margin-top: -6.5vmin;
@@ -75,6 +77,15 @@ a:link {
   margin-top: 8vmin;
 }
 
+.show-title {
+  display: flex;
+  justify-content: center ;
+  color: rgb(56, 54, 54);
+  color: rgb(52, 132, 218);
+  font-size: 10vmin;
+  font-family: 'Chelsea Market', cursive;
+}
+
 h3 {
   display: flex;
   justify-content: center ;
@@ -83,6 +94,13 @@ h3 {
   font-family: 'Chelsea Market', cursive;
   margin-top: -2vmin;
   margin-bottom: -2.5vmin;
+}
+
+.main-desc {
+  display: flex;
+  justify-content: center ;
+  text-align: center;
+  margin: 20px 90px 0 90px;
 }
 
 .piece-details {
@@ -166,18 +184,8 @@ input:focus {
   align-items: center;
 }
 
-/* button {
-  background-color: rgb(255, 255, 255);
-  border-radius: 15%;
-  height: 5vmin;
-  width: 16vmin;
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 3vmin;
-  cursor: pointer;
-} */
-
 #hov:hover {
-  color: #108127;
+  color: rgb(220, 172, 42);
 }
 
 .come-in {
@@ -187,10 +195,11 @@ input:focus {
   cursor: pointer;
   display: flex;
   justify-content: center;
+  margin-top: -1vmin;
 }
 
 .come-in:hover {
-  color: #108127;
+  color: rgb(52, 132, 218);
 }
 
 .hb {
@@ -232,16 +241,16 @@ input:focus {
 }
 
 .del-butt:hover {
-  background-color: #108127;
+  background-color: rgb(220, 172, 42);
   color: #ffffff;
 }
 
 .ed-butt {
-  background-color: #108127;
+  background-color: rgb(52, 132, 218);
   color: white;
   border-radius: 15%;
   height: 6vmin;
-  width: 16vmin;
+  width: 18vmin;
   font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
@@ -253,11 +262,11 @@ input:focus {
 }
 
 .add-comm {
-  background-color: #108127;
+  background-color: rgb(52, 132, 218);
   color: white;
   border-radius: 15%;
   height: 6vmin;
-  width: 22vmin;
+  width: 28vmin;
   font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
@@ -269,15 +278,16 @@ input:focus {
 }
 
 .add-up-butts {
-  background-color: #108127;
+  background-color: rgb(52, 132, 218);
   color: white;
   border-radius: 15%;
   height: 6vmin;
-  width: 20vmin;
+  width: 25vmin;
   font-family: 'Chelsea Market', cursive;
   font-size: 3vmin;
   cursor: pointer;
   margin-left: 9vmin;
+  margin-top: 1vmin;
 }
 
 .add-up-butts:hover {
