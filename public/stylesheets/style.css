@@ -1,3 +1,5 @@
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -16,6 +18,7 @@ body {
   font-family: 'Chelsea Market', cursive;
   margin-top: -6.5vmin;
   margin-bottom: -2.5vmin;
+  text-align: center;
 }
 
 h2 {
@@ -45,6 +48,7 @@ h1 {
   font-family: 'Chelsea Market', cursive;
   margin-top: -6.5vmin;
   margin-bottom: -2.5vmin;
+  text-align: center;
 }
 
 .nav {
@@ -103,6 +107,16 @@ h3 {
   margin: 20px 90px 0 90px;
 }
 
+.m-d {
+  font-family: 'Radio Canada', sans-serif;
+  font-size: medium;
+}
+
+.piece-details {
+  font-family: 'Radio Canada', sans-serif;
+  font-size: medium;
+}
+
 .piece-details {
   display: flex;
   width: 400px;
@@ -135,6 +149,10 @@ img {
   border: 3px solid rgb(56, 54, 54);
 }
 
+table {
+  margin-left: 12vmin;
+}
+
 .comm-sect {
   display: flex;
   text-align: center;
@@ -148,19 +166,19 @@ img {
 
 .comm-box:focus {
   outline: none !important;
-  border:2px solid #108127;
+  border:2px solid rgb(220, 172, 42);
   border-radius: 5px;
 }
 
 textarea:focus {
   outline: none !important;
-  border:2px solid #108127;
+  border:2px solid rgb(220, 172, 42);
   border-radius: 5px;
 }
 
 input:focus {
   outline: none !important;
-  border:2px solid #108127;
+  border:2px solid rgb(220, 172, 42);
   border-radius: 5px;
 }
 
@@ -169,20 +187,33 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .ava {
   border-radius: 50%;
   border: 2px solid rgb(56, 54, 54);
   height: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .tdcomm {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
+  height: 90px;
+  padding: 20px;
+  width: 350px;
+  overflow: auto;
+  /* text-align: start; */
 }
+
+/* .comm-row {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+} */
 
 #hov:hover {
   color: rgb(220, 172, 42);

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Dela+Gothic+One&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Gloria+Hallelujah&family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
@@ -55,12 +56,12 @@
     <tbody>
       <% let total = 0 %>
       <% piece.comments.forEach(function(c) { %>
-        <tr>
-          <td height="90px" class="user-comment">
+        <tr class="comm-row">
+          <td class="user-comment">
             <img class="ava" alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %>
           </td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
-          <td height="90px" class="tdcomm"><%= c.comment %></td>
+          <td class="tdcomm"><%= c.comment %></td>
           <td>
             <% if (user && user._id.equals(c.user)) { %>
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
