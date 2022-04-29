@@ -1,18 +1,12 @@
-
-
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(240, 240, 232);
 }
 
-/* a {
-  color: #108127;
-} */
 .mainTitle{
   display: flex;
   justify-content: center ;
-  /* color: rgb(56, 54, 54); */
   color: rgb(52, 132, 218);
   font-size: 14vmin;
   font-family: 'Chelsea Market', cursive;
@@ -43,7 +37,6 @@ h1 {
   display: flex;
   justify-content: center ;
   color: rgb(52, 132, 218);
-  /* color: rgb(56, 54, 54); */
   font-size: 12vmin;
   font-family: 'Chelsea Market', cursive;
   margin-top: -6.5vmin;
@@ -58,14 +51,6 @@ h1 {
   grid-column-gap: 45px;
   justify-content: center;
 }
-
-/* .lob {
-  margin-left: auto;
-}
-
-.lib {
-  margin-left: auto;
-} */
 
 a:link {
   text-decoration: none;
@@ -150,7 +135,7 @@ img {
 }
 
 table {
-  margin-left: 12vmin;
+  margin-left: 16vmin;
 }
 
 .comm-sect {
@@ -187,7 +172,6 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-content: center;
   height: 100%;
 }
 
@@ -207,15 +191,6 @@ input:focus {
   padding: 20px;
   width: 350px;
   overflow: auto;
-  /* text-align: start; */
-}
-
-.comm-row {
-  display: flex;
-  flex-direction: row;
-  justify-content:center;
-  align-items: center;
-  align-content: center;
 }
 
 #hov:hover {
