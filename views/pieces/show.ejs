@@ -1,93 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title><%= title %></title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Gloria+Hallelujah&family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-<body>
-    <title><%= title %></title>
-    <h1 class="show-title">"&nbsp;<%= piece.title %>&nbsp;"</h1>
-    <br>
-    <br>
-    <nav class="nav">
-        <a href="/pieces" class="hb" id="hov">HOME</a>
-        <% if (user) { %>
-          <a href="/pieces/new"class="npb" id="hov">NEW PIECE</a>
-          <a href="/logout" class="lob" id="hov">LOG OUT</a>
-        <% } else { %>
-          <a href="/auth/google" class="lib" id="hov">LOG IN</a>
-        <% } %>
-    </nav>
 
-<section class="show-page">
-  <img src="<%= piece.image %>" height="400vmin" alt="oopsies" >
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Gloria+Hallelujah&family=Radio+Canada:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <title>
+    <%= title %>
+  </title>
+  <h1 class="show-title">"&nbsp;<%= piece.title %>&nbsp;"</h1>
+  <br>
+  <br>
+  <nav class="nav">
+    <a href="/pieces" class="hb" id="hov">HOME</a>
+    <% if (user) { %>
+      <a href="/pieces/new" class="npb" id="hov">NEW PIECE</a>
+      <a href="/logout" class="lob" id="hov">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="lib" id="hov">LOG IN</a>
+        <% } %>
+  </nav>
+
+  <section class="show-page">
+    <img src="<%= piece.image %>" height="400vmin" alt="oopsies">
     <div class="piece-details">
-      <div>Title:&nbsp;<%= piece.title %></div>
-      <div>Artist:&nbsp;<%= piece.artist %></div>
-      <div>Location:&nbsp;<%= piece.location %></div>
-      <div>Media Used:&nbsp;<%= piece.media %></div>
-      <div>Currently On Display:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %></div>
+      <div>Title:&nbsp;<%= piece.title %>
+      </div>
+      <div>Artist:&nbsp;<%= piece.artist %>
+      </div>
+      <div>Location:&nbsp;<%= piece.location %>
+      </div>
+      <div>Media Used:&nbsp;<%= piece.media %>
+      </div>
+      <div>Currently On Display:&nbsp;<%= piece.currentlyAvailable ? 'Yes' : 'No' %>
+      </div>
       <br>
-      <div>Description: <br><%= piece.description %></div>
+      <div>Description: <br>
+        <%= piece.description %>
+      </div>
       <br>
       <% if (user && user._id.equals(piece.user)) { %>
-      <form action="/pieces/<%= piece._id %>/edit" method="GET">
-        <button class="ed-butt" type="submit">Edit Post</button>
+        <form action="/pieces/<%= piece._id %>/edit" method="GET">
+          <button class="ed-butt" type="submit">Edit Post</button>
+        </form>
+        <% } %>
+          <br>
+    </div>
+    <br>
+    </div>
+    <% if (piece.comments.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th width="200px">User</th>
+            <th>Date</th>
+            <th width="400px">Comment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let total=0 %>
+            <% piece.comments.forEach(function(c) { %>
+              <tr class="comm-row">
+                <td class="user-comment">
+                  <img class="ava" alt="avatar" src="<%= c.userAvatar %>">
+                  <%= c.userName %>
+                </td>
+                <td>
+                  <%= c.createdAt.toLocaleDateString() %>
+                </td>
+                <td class="tdcomm">
+                  <%= c.comment %>
+                </td>
+                <td>
+                  <% if (user && user._id.equals(c.user)) { %>
+                    <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                      <button type="submit" class="del-butt">X</button>
+                    </form>
+                    <% } %>
+                </td>
+              </tr>
+              <% }); %>
+                <tr>
+                  <td colspan="6"></td>
+                </tr>
+        </tbody>
+      </table>
+      <% } else { %>
+        <h5>No Comments Yet</h5>
+        <% } %>
+  </section>
+  <% if (user) { %>
+    <div class="comm-sect">
+      <form id="add-comment-form" method="POST" action="/pieces/<%= piece._id %>/comments">
+        <label>Comments / Interpretations:</label><br>
+        <br>
+        <textarea name="comment" class="comm-box" rows="4" cols="47"></textarea><br>
+        <br>
+        <input class="add-comm" type="submit" value="Add Comment">
       </form>
       <% } %>
-      <br>
-    </div>    
-<br>
-</div>
-<% if (piece.comments.length) { %>
-  <table>
-    <thead>
-      <tr>
-        <th width="200px">User</th>
-        <th>Date</th>
-        <th width="400px">Comment</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% let total = 0 %>
-      <% piece.comments.forEach(function(c) { %>
-        <tr class="comm-row">
-          <td class="user-comment">
-            <img class="ava" alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %>
-          </td>
-          <td><%= c.createdAt.toLocaleDateString() %></td>
-          <td class="tdcomm"><%= c.comment %></td>
-          <td>
-            <% if (user && user._id.equals(c.user)) { %>
-              <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                <button type="submit" class="del-butt">X</button>
-              </form>
-            <% } %>
-          </td>
-        </tr>
-      <% }); %>
-      <tr>
-        <td colspan="6"></td>
-      </tr>
-    </tbody>
-  </table>
-<% } else { %>
-  <h5>No Comments Yet</h5>
-<% } %>
-</section>
-<% if (user) { %>
-  <div class="comm-sect">
-  <form id="add-comment-form" method="POST" action="/pieces/<%= piece._id %>/comments">
-    <label>Comments / Interpretations:</label><br>
-    <br>
-    <textarea name="comment" class="comm-box" rows="4" cols="47"></textarea><br>
-    <br>
-    <input class="add-comm" type="submit" value="Add Comment">
-  </form>
-<% } %>
-<%- include('../partials/footer') %>
+        <%- include('../partials/footer') %>
