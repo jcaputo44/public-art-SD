@@ -1,5 +1,5 @@
 <div align="center">
-   <h1>:school_satchel: :school: Public Art SD :school: :school_satchel: </h1>
+   <h1>:city_sunrise: :moyai: Public Art SD :moyai: :city_sunrise: </h1>
    <h3>https://public-art-sd.herokuapp.com/</h3>
    <h5>Joseph Caputo</h5>                             
    
