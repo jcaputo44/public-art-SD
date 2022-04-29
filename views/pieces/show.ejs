@@ -62,7 +62,7 @@
     <% if (piece.comments.length) { %>
       <table>
         <thead>
-          <tr>
+          <tr class="th">
             <th width="200px">User</th>
             <th>Date</th>
             <th width="400px">Comment</th>
@@ -85,7 +85,7 @@
                 <td>
                   <% if (user && user._id.equals(c.user)) { %>
                     <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                      <button type="submit" class="del-butt">X</button>
+                      <button type="submit" class="del-butt">x</button>
                     </form>
                     <% } %>
                 </td>

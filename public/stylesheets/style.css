@@ -120,8 +120,7 @@ h3 {
   margin-top: 7vmin;
 }
 
-.add-form,
-.ed-form {
+.add-form, .ed-form {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -242,7 +241,8 @@ input:focus {
 
 .del-butt {
   background-color: white;
-  border-radius: 15%;
+  color: black;
+  border-radius: 30%;
   height: 5vmin;
   width: 5vmin;
   font-family: 'Chelsea Market', cursive;
@@ -252,7 +252,7 @@ input:focus {
 
 .del-butt:hover {
   background-color: rgb(220, 172, 42);
-  color: #ffffff;
+  color: white;
 }
 
 .ed-butt {
