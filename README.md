@@ -45,7 +45,6 @@
 ![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5)
 ![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
 ![Trello](https://img.shields.io/badge/-Trello-333?style=flat&logo=trello) 
-![Heroku](https://img.shields.io/badge/-Heroku-333?style=flat&logo=heroku)
 ![Markdown](https://img.shields.io/badge/-Markdown-333?style=flat&logo=markdown)
 ![Git](https://img.shields.io/badge/-Git-333?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
