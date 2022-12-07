@@ -77,7 +77,7 @@
 
 <details open>   
 <summary>Deployed Link</summary>
-<a href="https://public-art-sd.up.railway.app/">https://public-art-sd.herokuapp.com/</a>
+<a href="https://public-art-sd.up.railway.app/">https://public-art-sd.up.railway.app/</a>
 </details>
 
 ## :fast_forward: Next Steps   
