@@ -1,6 +1,6 @@
 <div align="center">
    <h1>:city_sunrise: :moyai: Public Art SD :moyai: :city_sunrise: </h1>
-   <h3>https://public-art-sd.herokuapp.com/</h3>
+   <h3>https://public-art-sd.up.railway.app/</h3>
    <h5>Joseph Caputo</h5>                             
    
 </div>
@@ -77,8 +77,8 @@
 </details>
 
 <details open>   
-<summary>Deployed Link (Heroku)</summary>
-<a href="https://public-art-sd.herokuapp.com/">https://public-art-sd.herokuapp.com/</a>
+<summary>Deployed Link</summary>
+<a href="https://public-art-sd.up.railway.app/">https://public-art-sd.herokuapp.com/</a>
 </details>
 
 ## :fast_forward: Next Steps   
