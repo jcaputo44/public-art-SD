@@ -1,11 +1,8 @@
 {
   "name": "public-art-sd",
-  "homepage": "jcaputo44.github.io/public-art-SD",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
     "start": "node ./bin/www"
   },
   "dependencies": {
